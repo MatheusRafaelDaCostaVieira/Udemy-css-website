@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap');
+
+:root {
+    --Color-1:  164, 188, 146;
+
+    --Color-2:  179, 201, 156;
+
+    --Color-3:  199, 233, 176;
+
+    --Color-4:  221, 255, 187;
+
+    --Color-5:  238, 238, 238;
+
+    --Color-6:  32, 38, 46;
+
+    --Color-7:  255, 255, 255;
+
+    --Font-sacramento: 'Sacramento', cursive;
+
+    --Font-montserrat: 'Montserrat', sans-serif;
+
+    --Font-merriwheater: 'Merriweather', serif;
+}
+
+* {
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    overflow-x: hidden;
+
+    overflow: overlay;
+
+    width: 100vw;
+}
+
+.top-container {
+    background-color: rgb(var(--Color-2));
+
+    height: 700px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.navbar {
+    align-items: center;
+
+    display: flex;
+
+    height: 60px;
+
+    justify-content: end;
+
+    padding: 0 50px;
+
+    width: 100%;
+}
+
+.navbar.active {
+    align-items: center;
+
+    background-color: rgb(var(--Color-7));
+
+    border-bottom: 1px solid rgb(var(--Color-6), 0.5);
+
+    display: flex;
+
+    height: 60px;
+
+    justify-content: center;
+
+    position: fixed;
+
+    transition: .4s all; 
+
+    top: 0;
+
+    width: 100%;
+
+    z-index: 2;
+}
+
+.nav-ul {
+    display: flex;
+
+    gap: 20px;
+}
+
+.nav-li {
+    list-style: none;
+}
+
+.nav-link {
+    color: rgb(var(--Color-5));
+
+    font-family: var(--Font-montserrat);
+
+    font-weight: 400;
+
+    text-decoration: none;
+}
+
+.navbar.active .nav-link {
+    color: rgb(var(--Color-6));
+}
+
+.cloud {    
+    bottom: 250px;
+
+    position: absolute;
+
+    right: 50px;
+}
+
+.home-text {
+    text-align: center;
+}
+
+.home-h1 {
+    color: rgb(var(--Color-5));
+
+    font-family: var(--Font-sacramento);
+
+    font-size: 6rem;
+
+    margin-top: 125px;
+}
+
+.home-h2 {
+    color: rgb(var(--Color-5));
+
+    font-family: var(--Font-montserrat);
+
+    font-size: 1.5rem;
+}
+
+.home-h1 span,
+.home-h2 span {
+    animation: homeColor 3s infinite;
+}
+
+@keyframes homeColor {
+    0% {
+        color: rgb(var(--Color-4));
+    }
+
+    50% {
+        color: rgb(var(--Color-3));
+    }
+
+    100% {
+        color: rgb(var(--Color-4));
+    }
+}
+
+.mountain {
+    bottom: 0;
+
+    transform: translateX(-1);
+
+    right: -10%;
+
+    position: absolute;
+}
+
+.mountain img {
+    width: 800px;
+}
+
+.profile {
+
+    padding: 0 5% 100px;
+
+    opacity: 0;
+
+    text-align: center;
+
+    transition: .4s ease-in;
+
+    transform: translateX(-50px);
+}
+
+.profile.active {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+.title:first-child {
+    margin: 50px 0 20px;
+}
+
+.title {
+    margin: 50px 0;
+
+    text-align: center;
+}
+
+.title-h1 {
+    color: rgb(var(--Color-3));
+
+    font-family: var(--Font-montserrat);
+
+    font-size: 2rem;
+
+    font-weight: 700;
+}
+
+.perfil-photo {
+    border-radius: 100%;
+
+    max-width: 350px;
+
+    width: 100%;
+}
+
+.profile-p {
+    color: rgb(var(--Color-6));
+
+    font-family: var(--Font-montserrat);
+
+    font-weight: 700;
+
+    margin: 0 auto;
+
+    max-width: 475px;
+}
+
+.skills-container {
+    padding: 50px 10% 100px;
+}
+
+.skill-row {
+    display: flex;
+
+    opacity: 0;
+
+    transition: .4s ease-in;
+
+    justify-content: space-between;
+}
+
+.skill-row.active {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+.skill-row-1 {
+    margin-bottom: 50px;
+
+    transform: translateX(50px);
+}
+
+.skill-row-2 {
+    flex-direction: row-reverse;
+
+    transform: translateX(-50px);
+}
+
+.skill-image {
+    border-radius: 100%;
+
+    width: 350px;
+}
+
+.skill-text-case {
+    padding-top: 20px;
+}
+
+.skill-h2 {
+    color: rgb(var(--Color-3));
+
+    font-family: var(--Font-montserrat);
+
+    font-size: 2.2rem;
+
+    font-weight: 700;
+
+    margin-bottom: 35px;
+}
+
+.skill-p {
+    color: rgb(var(--Color-6));
+
+    font-family: var(--Font-montserrat);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    line-height: 2;
+}
+
+.contact {
+    display: flex;
+
+    justify-content: center;
+
+    padding: 50px 5% 100px;
+}
+
+.contact-container {
+    background-color: rgb(var(--Color-4));
+
+    border-radius: 25px;
+
+    height: 600px;
+
+    padding: 10px;
+
+    width: 70%;
+}
+
+.contact-form {
+    align-items: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 45px;
+
+    height: 100%;
+
+    justify-content: center;
+
+    width: 100%;
+}
+
+.contact-input-container {
+    width: 100%;
+}
+
+.contact-input {
+    background-color: rgb(var(--Color-7));
+
+    border: none;
+
+    border-radius: 20px;
+
+    color: rgb(var(--Color-6), 0.5);
+
+    font-family: var(--Font-montserrat);
+
+    font-size: .875rem;
+
+    font-weight: 700;
+
+    max-width: 650px;
+
+    outline: none;
+
+    padding: 15px;
+
+    width: 100%;
+}
+
+.contact-textarea {
+    height: 300px;
+
+    resize: none;
+}
+
+.contact-input-text {
+    height: 45px;
+}
+
+.contact-btn {
+    background-color: rgb(var(--Color-7));
+
+    border: none;
+
+    border-radius: 25px;
+
+    color: rgb(var(--Color-6), 0.5);
+
+    font-family: var(--Font-montserrat);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    height: 45px;
+
+    transition: .3s ease-out;
+
+    width: 125px;
+}
+
+.contact-btn:hover {
+    scale: 1.05;
+}
+
+.footer {
+    background-color:rgb(var(--Color-4));
+
+    padding: 60px 5% 20px;
+
+    text-align: center;
+
+    width: 100%;
+}
+
+.footer-top {
+    margin-bottom: 40px;
+}
+
+.footer-ul {
+    display: flex;
+
+    gap: 35px;
+
+    justify-content: center;
+}
+
+.footer-li {
+    list-style: none;
+}
+
+.footer-link {
+    color: rgb(var(--Color-6));
+
+    text-decoration: none;
+}
+
+.footer-link i {
+    font-size: 0.875rem;
+
+    transition: .4s ease-in-out;
+}
+
+.footer-link i:hover {
+    scale: 1.1;
+}
+
+.footer-text {
+    color: rgb(var(--Color-6));
+
+    font-family: var(--Font-montserrat);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .top-container {
+        height: calc(100vh);
+    }
+
+    .cloud {
+        display: none;
+    }
+
+    .mountain {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .skill-row,
+    .skill-row-2 {
+        flex-direction: column;
+    }
+
+    .skill-img-container {
+        text-align: center;
+    }
+
+    .skill-image {
+        max-width: 350px;
+
+        width: 100%;
+    }
+
+    .contact-container {
+        width: 100%;
+    }
+}
